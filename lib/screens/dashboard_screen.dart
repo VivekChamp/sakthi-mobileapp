@@ -163,17 +163,17 @@ class DashboardScreen extends StatelessWidget {
                             );
                           },
                         ),
-                        DashboardCard(
-                          title: 'Accounting',
-                          icon: Icons.account_balance,
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              '/accounting',
-                              arguments: {'serverUrl': serverUrl, 'sid': sid},
-                            );
-                          },
-                        ),
+                        // DashboardCard(
+                        //   title: 'Accounting',
+                        //   icon: Icons.account_balance,
+                        //   onTap: () {
+                        //     Navigator.pushNamed(
+                        //       context,
+                        //       '/accounting',
+                        //       arguments: {'serverUrl': serverUrl, 'sid': sid},
+                        //     );
+                        //   },
+                        // ),
                         // New Dashboard Card for Receivable Report
                         DashboardCard(
                           title: 'Receivable Report',

@@ -269,7 +269,7 @@ class _SalesOrderScreenState extends State<SalesOrderScreen> {
       filteredSalesOrders =
           salesOrders.where((order) {
             final name = (order['name'] ?? '').toLowerCase();
-            final customer = (order['customer'] ?? '').toLowerCase();
+            final customer = (order['customer_name'] ?? '').toLowerCase();
             final status = (order['status'] ?? '').toLowerCase();
             final workflowState = (order['workflow_state'] ?? '').toLowerCase();
 
@@ -696,7 +696,7 @@ class _SalesOrderScreenState extends State<SalesOrderScreen> {
                           leading: CircleAvatar(
                             backgroundColor: const Color(0xFF005BAC),
                             child: Text(
-                              order['customer']?[0] ?? 'N',
+                              order['customer_name']?[0] ?? 'N',
                               style: Theme.of(context).textTheme.bodyMedium!
                                   .copyWith(
                                     color: Colors.white,
@@ -716,7 +716,7 @@ class _SalesOrderScreenState extends State<SalesOrderScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                order['customer'] ?? 'No Customer',
+                                order['customer_name'] ?? 'No Customer',
                                 style: Theme.of(context).textTheme.bodyMedium!
                                     .copyWith(color: const Color(0xFF333333)),
                               ),
